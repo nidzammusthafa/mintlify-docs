@@ -16,12 +16,12 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "https://wa.me/your-number"
+      "url": "https://wa.me/62895703153160"
     }
   ],
   "topbarCtaButton": {
     "name": "Get Started",
-    "url": "https://wazapsuite.com"
+    "url": "https://wazap-suite.vercel.app/"
   },
   "navigation": [
     {
@@ -44,10 +44,7 @@
     },
     {
       "group": "Lead Generation",
-      "pages": [
-        "scraper/maps-scraper",
-        "scraper/export-data"
-      ]
+      "pages": ["scraper/maps-scraper", "scraper/export-data"]
     },
     {
       "group": "AI Chatbot",
@@ -60,21 +57,15 @@
     },
     {
       "group": "Settings",
-      "pages": [
-        "settings/general",
-        "settings/templates"
-      ]
+      "pages": ["settings/general", "settings/templates"]
     },
     {
       "group": "Troubleshooting",
-      "pages": [
-        "troubleshooting/common-issues",
-        "troubleshooting/faqs"
-      ]
+      "pages": ["troubleshooting/common-issues", "troubleshooting/faqs"]
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/wazapsuite",
-    "github": "https://github.com/your-repo"
+    "facebook": "https://facebook.com/wazapsuite",
+    "github": "https://github.com/nidzammusthafa/wazap-suite-releases"
   }
 }
