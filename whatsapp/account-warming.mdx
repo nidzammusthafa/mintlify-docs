@@ -1,0 +1,104 @@
+---
+title: "Account Warmer"
+description: "Cara menjaga kesehatan akun WhatsApp dengan pemanasan otomatis sebelum blast massal."
+---
+
+**Account Warmer** adalah fitur untuk "memanaskan" akun WhatsApp sebelum mengirim blast massal. Ini penting untuk mencegah akun dibanned karena aktivitas mencurigakan.
+
+## Mengapa Account Warmer Penting?
+
+WhatsApp memantau aktivitas akun secara aktif. Jika akun yang baru terhubung langsung mengirim pesan ke ribuan orang, WhatsApp akan mendeteksi sebagai spam dan membanned akun tersebut.
+
+Account Warmer mensimulasikan perilaku manusia:
+- Mengirim pesan secara berkala
+- Melakukan percakapan acak
+- Berapa lama jeda antar pesan
+
+## Cara Menggunakan Account Warmer
+
+### 1. Buat Job Warming Baru
+
+Buka menu **Warmer** > klik **New Warmer Job**.
+
+<Frame>
+  <img 
+    src="/screenshots/Dashboard/detail-warmer.png" 
+    alt="Warmer Job" 
+    caption="Halaman pembuatan job warming"
+  />
+</Frame>
+
+### 2. Pilih Akun
+
+Pilih akun WhatsApp yang akan dipanaskan. Bisa lebih dari satu.
+
+### 3. Pilih Preset Kecepatan
+
+| Preset | Deskripsi |
+|--------|-----------|
+| **Slow** | Pelan, sangat aman untuk akun baru |
+| **Normal** | Kecepatan sedang |
+| **Fast** | Cepat, hanya untuk akun veteran |
+
+### 4. Pilih Corpus (Percakapan)
+
+Pilih jenis percakapan yang akan disimulasikan:
+
+- **Casual**: Obrolan sehari-hari
+- **Business**: Percakapan bisnis formal
+- **Customer Service**: Komunikasi layanan pelanggan
+- **Custom**: Buat corpus sendiri
+
+### 5. Tentukan Target
+
+Pilih bagaimana warming berhenti:
+
+- **Messages**: Kirim X pesan, lalu berhenti
+- **Duration**: Berjalan selama X menit
+- **Pairs**: Selesai X pasangan pertanyaan-jawaban
+
+### 6. Mulai Warming
+
+Klik **Start Warmer** untuk memulai.
+
+## Mode Integrasi dengan Blast
+
+Anda juga bisa mengaktifkan Account Warmer langsung dari menu Blast tanpa membuat job terpisah.
+
+### Mode Interleave (Disarankan)
+
+Mode ini menyisipkan pesan warming di antara pesan blast:
+
+```
+Blast 1 → Warmer → Blast 2 → Warmer → Blast 3
+```
+
+**Konfigurasi Interleave:**
+- **Interval**: Setiap X pesan blast, sisipkan warming
+- **Limit**: Batas pesan warming per sesi
+
+<Frame>
+  <img 
+    src="/screenshots/Dashboard/blast-warmer.jpeg" 
+    alt="Blast with Warmer" 
+    caption="Konfigurasi warmer dalam blast"
+  />
+</Frame>
+
+## Best Practices
+
+1. **Warming Sebelum Blast Besar**: Lakukan warming 30-60 menit sebelum blast massal
+2. **Gunakan Mode Interleave**: Paling natural terlihat oleh WhatsApp
+3. **Sesuaikan Kecepatan**: Akun baru = Slow, Akun veteran = Fast
+4. **Pantau Health Score**: Seharusnya naik setelah warming
+
+## Troubleshooting
+
+### Warmer Terlalu Lama
+- Periksa preset, pilih yang lebih cepat
+- Kurangi target messages/duration
+
+### Health Score Tidak Naik
+- Mungkin akun sudah bermasalah sebelumnya
+- Coba lakukan warming beberapa kali
+- Istirahatkan akun 1-2 hari

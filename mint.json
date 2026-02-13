@@ -1,0 +1,77 @@
+{
+  "name": "WazapSuite",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#25D366",
+    "light": "#DCF8C6",
+    "dark": "#075E54"
+  },
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "https://wa.me/your-number"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Get Started",
+    "url": "https://wazapsuite.com"
+  },
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "introduction",
+        "quickstart",
+        "getting-started/installation",
+        "getting-started/account-setup"
+      ]
+    },
+    {
+      "group": "WhatsApp Automation",
+      "pages": [
+        "whatsapp/manage-accounts",
+        "whatsapp/message-blasting",
+        "whatsapp/scheduling-campaigns",
+        "whatsapp/account-warming"
+      ]
+    },
+    {
+      "group": "Lead Generation",
+      "pages": [
+        "scraper/maps-scraper",
+        "scraper/export-data"
+      ]
+    },
+    {
+      "group": "AI Chatbot",
+      "pages": [
+        "ai/ai-settings",
+        "ai/auto-reply",
+        "ai/flow-builder",
+        "ai/flow-nodes"
+      ]
+    },
+    {
+      "group": "Settings",
+      "pages": [
+        "settings/general",
+        "settings/templates"
+      ]
+    },
+    {
+      "group": "Troubleshooting",
+      "pages": [
+        "troubleshooting/common-issues",
+        "troubleshooting/faqs"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "x": "https://x.com/wazapsuite",
+    "github": "https://github.com/your-repo"
+  }
+}

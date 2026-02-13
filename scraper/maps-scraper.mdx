@@ -1,0 +1,93 @@
+---
+title: "Google Maps Scraper"
+description: "Mengambil data prospek bisnis dari Google Maps secara massal."
+---
+
+**Maps Scraper** adalah fitur untuk mengumpulkan data bisnis (nama, nomor telepon, alamat) dari Google Maps. Data ini bisa langsung digunakan untuk kampanye WhatsApp Blast.
+
+## Metode Scraper
+
+Terdapat dua metode yang bisa Anda gunakan:
+
+### 1. PencarianBerdasarkan Kata Kunci (Query)
+
+Cocok untuk mencari bisnis berdasarkan kategori di wilayah tertentu.
+
+**Langkah-langkah:**
+1. Buka **Scraper** > **Maps Scraper**
+2. Klik **New Scraping**
+3. Pilih metode **Query Search**
+4. Masukkan query, contoh: `Toko Buku di Jakarta`
+5. Tentukan lokasi (opsional)
+6. Atur batas hasil
+7. Klik **Start Scraping**
+
+<Frame>
+  <img 
+    src="/screenshots/Dashboard/maps-scraper.jpeg" 
+    alt="Maps Scraper" 
+    caption="Halaman utama Maps Scraper"
+  />
+</Frame>
+
+### 2. Pencarian Berdasarkan Koordinat
+
+Cocok untuk mencari data di area spesifik dengan radius tertentu.
+
+**Langkah-langkah:**
+1. Pilih metode **Coordinate Search**
+2. Masukkan Latitude dan Longitude
+3. Tentukan radius (dalam meter)
+4. Atur batas hasil
+5. Klik **Start Scraping**
+
+<Frame>
+  <img 
+    src="/screenshots/Dashboard/new-coordinate-scraper.jpeg" 
+    alt="Coordinate Scraper" 
+    caption="Scraper berbasis koordinat"
+  />
+</Frame>
+
+## Men监控 Progres
+
+Scraper akan menampilkan progres secara real-time:
+- **Total Found**: Jumlah data ditemukan
+- **Scraped**: Jumlah data sudah di-scrape
+- **Status**: Running/Completed/Stopped
+
+## Mengekspor Data
+
+Setelah scraping selesai:
+
+1. Klik tombol **Export**
+2. Pilih format:
+   - **CSV**: Untuk Excel atau import ke sistem lain
+   - **Excel (.xlsx)**: Untuk penggunaan langsung
+
+Data yang diekspor meliputi:
+- Nama Bisnis
+- Alamat
+- Nomor Telepon
+- Rating (jika ada)
+- Kategori
+
+## Tips Mendapatkan Data Lebih Banyak
+
+1. **Gunakan Query Spesifik**: "Toko Oleh-oleh di Bandung" lebih baik dari "Toko di Bandung"
+2. **Coba Berbagai Variasi**: Contoh: "Apotek", "Farmasi", "Resep Dokter"
+3. **Gunakan Coordinate Search**: Untuk area yang tidak terkenal
+4. **Batasi Radius**: Radius kecil (500m-1km) biasanya lebih akurat
+
+<Warning>
+  Penggunaan scraper yang terlalu agresif bisa menyebabkan IP sementara diblokir oleh Google. Jika terjadi, tunggu beberapa jam dan coba lagi dengan delay lebih tinggi.
+</Warning>
+
+## Menggunakan Data untuk Blast
+
+Data yang sudah di-export bisa langsung di-import ke Blast Campaign:
+
+1. Di halaman **Blast**, klik **New Campaign**
+2. Pilih tab **Import from Scraped Data**
+3. Pilih hasil scrape yang ingin digunakan
+4. Lanjutkan dengan langkah membuat blast biasa

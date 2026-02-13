@@ -1,0 +1,188 @@
+---
+title: "Kirim Pesan Massal (Blast)"
+description: "Cara membuat dan mengirim kampanye pesan massal ke ribuan kontak sekaligus."
+---
+
+Fitur **Message Blasting** memungkinkan Anda mengirim pesan WhatsApp ke ribuan kontak secara bersamaan dengan mudah dan efisien.
+
+## Persiapan Sebelum Blast
+
+Sebelum membuat kampanye, pastikan:
+
+1. ✅ Minimal 1 akun WhatsApp terhubung
+2. ✅ Daftar nomor tujuan sudah siap (Excel/CSV)
+3. ✅ Isi konten pesan sudah disiapkan
+4. ✅ (Opsional) Template pesan sudah dibuat
+
+## Membuat Kampanye Baru
+
+### 1. Mulai Kampanye
+
+Buka menu **Blast** di sidebar, lalu klik **New Campaign**.
+
+<Frame>
+  <img 
+    src="/screenshots/Dashboard/new-blast.jpeg" 
+    alt="New Blast" 
+    caption="Halaman pembuatan kampanye baru"
+  />
+</Frame>
+
+### 2. Isi Detail Kampanye
+
+**Nama Kampanye**: Beri nama yang mudah diingat, contoh: "Promo Ramadan 2026"
+
+**Pilih Akun Pengirim**: Centang satu atau beberapa akun WhatsApp yang akan digunakan.
+
+<Info>
+  Menggunakan beberapa akun akan mendistribusikan pesan secara merata (round-robin).
+</Info>
+
+### 3. Unggah Daftar Penerima
+
+Unggah file Excel (.xlsx) atau CSV yang berisi nomor telepon.
+
+**Format File:**
+| Kolom | Wajib | Contoh |
+|-------|-------|--------|
+| Phone | ✅ | 628123456789 |
+| Nama | ❌ | John Doe |
+| Kota | ❌ | Jakarta |
+
+Sistem akan otomatis mendeteksi kolom nomor telepon. Jika tidak terdeteksi, Anda bisa memilih kolom secara manual.
+
+<Frame>
+  <img 
+    src="/screenshots/Dashboard/import-contacts.jpeg" 
+    alt="Import Contacts" 
+    caption="Unggah file penerima"
+  />
+</Frame>
+
+### 4. Buat Konten Pesan
+
+#### Jenis Pesan yang Didukung:
+- **Teks**: Pesan teks biasa
+- **Gambar**: Kirim gambar dengan caption
+- **Dokumen**: Kirim file PDF, DOC, dll
+- **Voice**: Kirim pesan suara
+
+#### Variabel Personalisasi:
+Gunakan variabel dari kolom file Excel untuk personalisasi:
+
+```
+Halo {Nama}, kami dari {Perusahaan} ingin menawarkan...
+```
+
+Cukup klik tombol variabel untuk menyisipkan `{nama_kolom}`.
+
+<Frame>
+  <img 
+    src="/screenshots/Dashboard/message-template-preview.jpeg" 
+    alt="Message Template" 
+    caption="Pratinjau pesan dengan variabel"
+  />
+</Frame>
+
+### 5. Konfigurasi Kecepatan
+
+Pilih kecepatan pengiriman:
+
+| Preset | Delay | Penggunaan |
+|--------|-------|------------|
+| **Safe Mode** | 15-30 detik | Akun baru/belum terbukti |
+| **Normal** | 8-15 detik | Penggunaan normal |
+| **Turbo** | 3-8 detik | Akun veteran |
+
+<Warning>
+  Jangan langsung menggunakan Turbo untuk akun baru! WhatsApp akan mendeteksi sebagai spam.
+</Warning>
+
+### 6. (Opsional) Aktifkan Account Warmer
+
+Disarankan untuk mengaktifkan Account Warmer agar akun tetap sehat.
+
+<Frame>
+  <img 
+    src="/screenshots/Dashboard/blast-warmer.jpeg" 
+    alt="Blast Warmer" 
+    caption="Integrasi Account Warmer"
+  />
+</Frame>
+
+Pilih mode:
+- **Before Blast**: Panaskan dulu, baru blast
+- **Parallel**: Warming dan blast berjalan bersamaan
+- **Interleave**: Sisipkan pesan warming di antara pesan blast
+
+### 7. Jadwal Pengiriman (Opsional)
+
+Anda bisa menjadwalkan pengiriman untuk waktu tertentu:
+
+1. Aktifkan **Schedule**
+2. Pilih tanggal dan waktu mulai
+3. Tentukan **Time Windows** (jam aktif pengiriman)
+4. Pilih hari aktif dalam seminggu
+
+### 8. Launch Kampanye
+
+Klik **Launch Campaign** untuk memulai.
+
+<Frame>
+  <img 
+    src="/screenshots/Dashboard/blast-homepage.jpeg" 
+    alt="Blast Homepage" 
+    caption="Daftar kampanye aktif"
+  />
+</Frame>
+
+## Memantau Progres
+
+Di halaman utama Blast, Anda dapat melihat:
+
+- **Total**: Jumlah total penerima
+- **Sent**: Jumlah pesan terkirim
+- **Failed**: Jumlah pesan gagal
+- **Pending**: Jumlah pesan belum terkirim
+- **Status**: Processing/Paused/Completed
+
+<Frame>
+  <img 
+    src="/screenshots/Dashboard/blast-detail.jpeg" 
+    alt="Blast Detail" 
+    caption="Detail progres kampanye"
+  />
+</Frame>
+
+## Mengontrol Kampanye
+
+Saat kampanye berjalan, Anda bisa:
+
+- **Pause**: Jeda sementara
+- **Resume**: Lanjutkan setelah jeda
+- **Stop**: Hentikan permanen
+- **View Logs**: Lihat detail pengiriman
+
+## Tips Blast yang Efektif
+
+1. **Personalisasi Pesan**: Gunakan variabel untuk membuat pesan terasa personal
+2. **Mulai dengan Safe Mode**: Tingkatkan bertahap setelah beberapa kampanye
+3. **Gunakan Multi-Account**: Distribusikan ke beberapa akun
+4. **Aktifkan Warmer**: Jaga kesehatan akun
+5. **Gunakan Time Windows**: Kirim hanya di jam kerja (08:00-20:00)
+6. **Monitor Health Score**: Jaga kesehatan akun tetap tinggi
+
+## Troubleshooting
+
+### Pesan Gagal Terkirim
+- Periksa nomor tujuan (format harus benar: 628xxx)
+- Periksa kesehatan akun WhatsApp
+- Coba ulangi dengan delay lebih tinggi
+
+### Akun Terlogout
+- Hubungkan ulang akun dengan scan QR
+- Periksa koneksi HP ke internet
+
+### Blast Terlalu Lambat
+- Tingkatkan preset ke Turbo (hanya untuk akun veteran)
+- Kurangi delay jika menggunakan Custom

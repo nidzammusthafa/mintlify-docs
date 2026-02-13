@@ -1,0 +1,115 @@
+---
+title: "Masalah Umum"
+description: "Solusi untuk masalah umum yang sering dihadapi pengguna WazapSuite."
+---
+
+## Masalah Koneksi WhatsApp
+
+### Akun Terlogout Otomatis
+
+**Gejala**: Status akun berubah menjadi "Disconnected" tanpa sepengetahuan.
+
+**Penyebab**:
+- HP tidak terhubung ke internet dalam waktu lama
+- WhatsApp di HP logout
+- Session expired
+
+**Solusi**:
+1. Buka WhatsApp di HP
+2. Pastikan HP terhubung ke internet
+3. Di aplikasi WazapSuite, klik **Reconnect**
+4. Scan QR Code ulang jika diperlukan
+
+### Tidak Bisa Scan QR Code
+
+**Gejala**: Layar QR Code tidak muncul atau QR Code tidak terbaca.
+
+**Solusi**:
+1. Pastikan layar komputer dalam mode terang
+2. Periksa kamera HP terbuka
+3. Coba gunakan metode **Pairing Code** sebagai alternatif
+4. Perbarui WhatsApp di HP ke versi terbaru
+
+## Masalah Pengiriman Pesan
+
+### Pesan Gagal Terkirim
+
+**Gejala**: Pesan terkirim tapi gagal (tanda centang merah).
+
+**Penyebab & Solusi**:
+
+| Kode Error | Penyebab | Solusi |
+|------------|----------|--------|
+| Invalid Number | Format nomor salah | Gunakan format: 628xxx |
+| Not in Contacts | Nomor tidak valid | Periksa nomor di file Excel |
+| Rate Limited | Terlalu cepat | Tambah delay |
+| Account Banned | Akun diblocked | Hubungi support |
+
+### Pengiriman Terlalu Lambat
+
+**Gejala**: Pesan terkirim tapi sangat lambat (lebih dari 1 menit per pesan).
+
+**Solusi**:
+1. Buka pengaturan blast
+2. Ubah preset ke **Normal** atau **Turbo**
+3. Jika sudah Turbo, cek kesehatan akun
+4. Coba gunakan akun lain untuk distribusikan beban
+
+## Masalah AI Chatbot
+
+### AI Tidak Merespons
+
+**Gejala**: Chatbot tidak membalas pesan masuk.
+
+**Solusi**:
+1. Buka **AI Settings**
+2. Pastikan toggle **Enable AI Agent** hidup
+3. Periksa API key masih valid
+4. Cekcredits provider AI masih ada
+5. Periksa Flow Builder - pastikan ada yang aktif
+
+### Respons AI Tidak Sesuai
+
+**Gejala**: AI menjawab tidak sesuai dengan yang diharapkan.
+
+**Solusi**:
+1. Perbaiki **System Prompt** di AI Settings
+2. Turunkan **Temperature** ke 0.5 untuk respons lebih akurat
+3. Di Flow Builder, gunakan node **Condition** untuk arahkan percakapan
+
+## Masalah Scraper
+
+### Tidak Ada Hasil
+
+**Gejala**: Scraping selesai tapi data kosong.
+
+**Solusi**:
+1. Periksa query - gunakan kata kunci yang lebih umum
+2. Untuk Coordinate Search, periksa format lat/lng
+3. Coba metode yang berbeda (Query vs Coordinate)
+4. Periksa koneksi internet
+
+### Terlalu Lambat
+
+**Solusi**:
+1. Kurangi batas hasil
+2. Periksa koneksi internet
+3. Tunggu beberapa saat, coba lagi
+
+## Masalah Lainnya
+
+### Aplikasi Tidak Bisa Dibuka
+
+**Solusi**:
+1. Restart komputer
+2. Uninstall dan install ulang aplikasi
+3. Pastikan Visual C++ Redistributable terinstal
+4. Hubungi tim support jika masih bermasalah
+
+### License Activation Gagal
+
+**Solusi**:
+1. Periksa koneksi internet
+2. Pastikan license key sesuai (tanpa spasi ekstra)
+3. Pastikan license belum digunakan di perangkat lain
+4. Hubungi support untuk reset license

@@ -1,0 +1,109 @@
+---
+title: "Pengaturan AI"
+description: "Cara mengkonfigurasi AI agent dengan Google Gemini atau provider lainnya."
+---
+
+Sebelum membuat chatbot otomatis, Anda perlu mengatur AI Agent terlebih dahulu.
+
+## Mengaktifkan AI Agent
+
+### 1. Buka Pengaturan AI
+
+Buka menu **AI Settings** atau **AI Studio** di sidebar.
+
+<Frame>
+  <img 
+    src="/screenshots/Dashboard/ai-studio.jpeg" 
+    alt="AI Studio" 
+    caption="Halaman pengaturan AI"
+  />
+</Frame>
+
+### 2. Pilih Provider AI
+
+WazapSuite mendukung beberapa provider AI:
+
+| Provider | Model | Deskripsi |
+|----------|-------|-----------|
+| **Google Gemini** | gemini-2.5-flash, gemini-1.5-pro | Default, gratis credits |
+| **OpenAI** | gpt-4o, gpt-4o-mini | Kualitas tinggi |
+| **DeepSeek** | deepseek-chat | Murah, cepat |
+| **Ollama** | Local models | Running lokal |
+
+<Info>
+  Google Gemini sangat disarankan karena sudah include credits gratis dan performa yang baik untuk chatbot.
+</Info>
+
+### 3. Masukkan API Key
+
+1. Dapatkan API key dari provider yang dipilih:
+   - [Google AI Studio](https://aistudio.google.com/app/apikey)
+   - [OpenAI Platform](https://platform.openai.com/api-keys)
+2. Masukkan API key di kolom yang tersedia
+3. Klik **Validate** untuk memastikan API key valid
+
+<Frame>
+  <img 
+    src="/screenshots/Dashboard/select-model-provider.jpeg" 
+    alt="Select Model" 
+    caption="Pemilihan provider dan model AI"
+  />
+</Frame>
+
+### 4. Konfigurasi Parameter
+
+| Parameter | Deskripsi | Rekomendasi |
+|-----------|-----------|-------------|
+| **System Prompt** | Persona/ instruksi AI | Sesuaikan dengan bisnis |
+| **Temperature** | Tingkat kreativitas (0-1) | 0.7 untuk chatbot |
+| **Memory Size** | Jumlah pesan terakhir yang diingat | 10 |
+| **Max Tokens** | Panjang respons maksimal | 500 |
+
+### 5. Simpan & Aktifkan
+
+Klik **Save** dan aktifkan toggle **Enable AI Agent**.
+
+## Menguji AI
+
+Setelah pengaturan, Anda bisa menguji AI di **Simulator**:
+
+1. Ketik pesan percobaan
+2. Lihat respons dari AI
+3. Periksa apakah sesuai ekspektasi
+
+<Frame>
+  <img 
+    src="/screenshots/Dashboard/prompt-tester.jpeg" 
+    alt="Prompt Tester" 
+    caption="Tool pengujian AI"
+  />
+</Frame>
+
+## Tips Membuat System Prompt yang Baik
+
+Contoh system prompt untuk bisnis:
+
+```
+Anda adalah customer service profesional dari [Nama Toko].
+- Gunakan bahasa Indonesia yang sopan
+- Responsif dan ramah
+- Pahami produk yang kami jual
+- Jika ada pertanyaan teknis, arahkan ke tim teknis
+- Selalu tawarkan bantuan jika ada yang dibutuhkan
+```
+
+## Troubleshooting
+
+### AI Tidak Merespons
+- Periksa API key sudah benar
+- Pastikan credits provider masih ada
+- Cek koneksi internet
+
+### Respons Tidak Sesuai
+- Perbaiki system prompt
+- Sesuaikan temperature (lebih rendah = lebih akurat)
+- Periksa memory size (turunkan jika konteks terlalu panjang)
+
+### Credits Habis
+- Jika menggunakan Gemini, buat project baru di Google Cloud untuk credits baru
+- Jika menggunakan OpenAI, beli credits di platform mereka

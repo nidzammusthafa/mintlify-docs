@@ -1,0 +1,112 @@
+---
+title: "Setup Akun WhatsApp"
+description: "Cara menghubungkan akun WhatsApp bisnis atau pribadi ke WazapSuite."
+---
+
+Untuk mulai menggunakan WazapSuite, Anda perlu menghubungkan minimal satu akun WhatsApp. Ikuti panduan di bawah ini.
+
+## Metode Penghubungan
+
+Terdapat dua cara untuk menghubungkan akun WhatsApp:
+
+### Metode 1: Scan QR Code (Direkomendasikan)
+Cocok untuk pemula dan pengguna yang ingin menghubungkan akun dengan cepat.
+
+**Langkah-langkah:**
+1. Buka aplikasi WazapSuite
+2. Klik menu **Accounts** di sidebar kiri
+3. Klik tombol **Add Account**
+
+<Frame>
+  <img 
+    src="/screenshots/Dashboard/login-sync.png" 
+    alt="QR Code Login" 
+    caption="Tampilan QR Code untuk login"
+  />
+</Frame>
+
+4. Pilih metode **Scan QR Code**
+5. Buka WhatsApp di HP Anda:
+   - **iOS**: Settings > Linked Devices > Link a Device
+   - **Android**: Settings > Linked Devices > Link a Device
+6. Scan QR Code yang muncul di layar komputer
+7. Tunggu hingga proses sinkronisasi selesai
+8. Akun akan muncul di daftar dengan status **Connected**
+
+### Metode 2: Pairing Code
+Cocok jika Anda tidak dapat scan QR Code (misalnya HP jauh dari komputer).
+
+**Langkah-langkah:**
+1. Klik **Add Account** > **Pairing Code**
+2. Masukkan nomor WhatsApp Anda (format: 628xxxxxxxxx)
+3. Klik **Send Code**
+4. Buka WhatsApp di HP > Settings > Linked Devices
+5. Masukkan 8-digit kode yang muncul di layar komputer
+6. Akun akan terhubung secara otomatis
+
+<Frame>
+  <img 
+    src="/screenshots/Dashboard/new-account-pairing.png" 
+    alt="Pairing Code" 
+    caption="Tampilan metode Pairing Code"
+  />
+</Frame>
+
+## Mengelola Akun
+
+Setelah terhubung, Anda bisa melihat semua akun di halaman **Accounts**.
+
+### Informasi Akun
+Setiap akun menampilkan:
+- **Nama**: Nama yang Anda berikan
+- **Status**: Connected/Disconnected
+- **Health Score**: Skor kesehatan akun (0-100)
+- **Messages Today**: Jumlah pesan hari ini
+
+<Frame>
+  <img 
+    src="/screenshots/Dashboard/account-quick-setting.png" 
+    alt="Account Settings" 
+    caption="Pengaturan cepat akun"
+  />
+</Frame>
+
+### Pengaturan Akun
+
+Klik ikon **Settings** pada akun untuk mengatur:
+
+| Pengaturan | Deskripsi |
+|------------|-----------|
+| **Auto-start** | Mulai otomatis saat aplikasi dibuka |
+| **Daily Limit** | Batas pesan per hari |
+| **Inbox** | Aktifkan/nonaktifkan kotak masuk |
+| **Headless Mode** | Jalankan browser di belakang layar |
+
+<Info>
+  Untuk akun baru, disarankan menggunakan daily limit rendah (50-100 pesan) dan secara bertahap ditingkatkan.
+</Info>
+
+## Tips Keamanan
+
+1. **Jangan terlalu banyak akun** - Sebaiknya mulai dengan 1-3 akun
+2. **Pemanasan akun** - Gunakan fitur Account Warmer sebelum mengirim blast massal
+3. **Periksa health score** - Jika skor rendah, kurangi aktivitas sementara
+4. **Backup session** - Ekspor backup secara berkala
+
+## Troubleshoot Masalah Koneksi
+
+### Akun Terlogout Sendiri
+- Periksa apakah HP Anda tetap terhubung ke internet
+- WhatsApp akan logout jika HP tidak terhubung dalam 14 hari
+- Hubungkan kembali dengan scan QR
+
+### Status "Disconnected"
+- Klik tombol **Start** untuk menghubungkan ulang
+- Atau klik **Logout** > hubungkan ulang dari awal
+
+## Langkah Berikutnya
+
+Sekarang akun WhatsApp Anda sudah terhubung. Anda siap untuk:
+- Mengirim pesan massal dengan [Blast Campaign](/whatsapp/message-blasting)
+- Membuat chatbot otomatis dengan [AI Flow Builder](/ai/flow-builder)
+- Scrape data prospek dengan [Maps Scraper](/scraper/maps-scraper)

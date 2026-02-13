@@ -1,0 +1,75 @@
+---
+title: "Auto-Reply Sederhana"
+description: "Cara membuat balasan otomatis berbasis kata kunci tanpa perlu coding."
+---
+
+Fitur **Auto-Reply** adalah cara termudah untuk membuat chatbot tanpa harus menggunakan AI. Cocok untuk bisnis yang hanya butuh respons sederhana.
+
+## Membuat Aturan Auto-Reply
+
+### 1. Buka Menu Auto-Reply
+
+Buka menu **Auto-Reply** di sidebar.
+
+### 2. Buat Aturan Baru
+
+Klik tombol **New Rule**.
+
+<Frame>
+  <img 
+    src="/screenshots/Dashboard/auto-reply-setting.jpeg" 
+    alt="Auto Reply Settings" 
+    caption="Halaman pengaturan auto-reply"
+  />
+</Frame>
+
+### 3. Konfigurasi Aturan
+
+**Nama Aturan**: Beri nama yang mudah dikenali, contoh: "Jam Buka Toko"
+
+**Trigger (Pemicu)**:
+- **Keywords**: Kata-kata yang memicu balasan
+- **Match Type**: 
+  - **Contains**: Mengandung kata (contoh: "tanya jam" akan trigger)
+  - **Exact**: Sama persis
+  - **Starts With**: Diawali kata
+
+**Response**: Pilih template pesan yang sudah dibuat sebelumnya.
+
+### 4. Jadwalkan (Opsional)
+
+Anda bisa mengatur kapan aturan aktif:
+- **Active Hours**: Jam tertentu saja
+- **Active Days**: Hari-hari tertentu dalam seminggu
+
+### 5. Simpan & Aktifkan
+
+Aktifkan toggle untuk mengaktifkan aturan.
+
+## Urutan Prioritas
+
+Jika ada beberapa aturan auto-reply, sistem akan memeriksa berdasarkan prioritas (nomor 1 paling tinggi).
+
+<Info>
+  Jika ada kata kunci yang sama di beberapa aturan, yang prioritasnya lebih tinggi yang akan dijalankan.
+</Info>
+
+## Tips Menggunakan Auto-Reply
+
+1. **Gunakan Banyak Aturan**: Buat aturan untuk berbagai pertanyaan umum
+2. **Gabungkan dengan Template**: Gunakan template pesan untuk respons yang rapi
+3. **Atur Jadwal**: Nonaktifkan di luar jam kerja jika diperlukan
+
+## Contoh Penggunaan
+
+**Aturan 1:**
+- Trigger: "jam", "buka", "tutup"
+- Response: "Toko kami buka jam 08.00 - 20.00"
+
+**Aturan 2:**
+- Trigger: "alamat", "lokasi"
+- Response: "Alamat: Jl. Contoh No.123, Jakarta"
+
+**Aturan 3:**
+- Trigger: "harga", "berapa"
+- Response: "Silakan lihat catalog di link berikut: ..."

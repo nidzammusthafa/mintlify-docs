@@ -1,0 +1,127 @@
+---
+title: "Flow Builder (Lanjutan)"
+description: "Membuat chatbot canggih dengan visual flow builder menggunakan AI dan logika percabangan."
+---
+
+**Flow Builder** adalah fitur advanced untuk membuat chatbot percakapan yang kompleks. Dibandingkan Auto-Reply sederhana, Flow Builder memungkinkan:
+
+- Percabangan logika (if/else)
+- Pengumpulan data dari user
+- Integrasi dengan API eksternal
+- Respons AI yang intelligent
+
+## Akses Flow Builder
+
+Buka menu **Flow Builder** di sidebar.
+
+## Membuat Flow Baru
+
+### 1. Buat Flow
+
+Klik **New Flow** dan masukkan nama flow.
+
+### 2. Tentukan Trigger
+
+Trigger adalah kapan flow ini akan dijalankan:
+
+| Trigger Type | Deskripsi |
+|--------------|-----------|
+| **Keyword** | Jalan jika user mengirim kata tertentu |
+| **All Messages** | Jalan untuk semua pesan masuk |
+| **None** | Hanya bisa dipanggil dari flow lain |
+
+### 3. Desain Flow
+
+Anda akan melihat canvas dengan node-node yang bisa disusun:
+
+<Frame>
+  <img 
+    src="/screenshots/Dashboard/prompt-architect.jpeg" 
+    alt="Flow Builder" 
+    caption="Antarmuka visual Flow Builder"
+  />
+</Frame>
+
+## Jenis-Jenis Node
+
+### Node Pemicu (Trigger)
+- **Trigger**: Titik awal flow berdasarkan keyword
+
+### Node Pesan
+- **Static Message**: Kirim teks tetap
+- **AI Response**: Kirim respons dari AI
+- **Delay**: Tunggu X detik sebelum lanjut
+
+### Node Logika
+- **Condition**: Percabangan if/else
+- **Switch**: Multi-cabang berdasarkan nilai
+- **Intent Classifier**: Deteksi niat user (AI)
+- **Confirmation**: Konfirmasi Ya/Tidak
+
+### Node Data
+- **Variable**: Simpan input user ke variabel
+- **HTTP Request**: Panggil API eksternal
+
+### Kontrol Alur
+- **Transfer**: Kirim ke agent manusia
+- **End**: Akhiri flow
+
+## Contoh Flow Sederhana
+
+### Flow: Penerimaan Order
+
+```
+[Trigger: "order"] 
+  → [Static: "Silakan pilih produk:"]
+  → [AI Response: "Apa produk yang Anda inginkan?"]
+  → [Variable: simpan ke {produk}]
+  → [Condition: {produk} == "konsultasi"]
+    → [AI Response: "Baik, kami jadwalkan..."]
+    → [End]
+    → [AI Response: "Silakan transfer ke rekening..."]
+    → [End]
+```
+
+## Menguji Flow
+
+Gunakan **Simulator** untuk menguji flow sebelum diaktifkan:
+
+1. Klik tombol **Test** atau **Simulate**
+2. Masukkan pesan percobaan
+3. Lihat alur yang dilalui
+4. Periksa nilai variabel
+
+## Mengaktifkan Flow
+
+1. Klik **Save** untuk menyimpan flow
+2. Aktifkan toggle **Active**
+3. Atur **Priority** (angka tinggi = dicek lebih dulu)
+
+<Warning>
+  Jika ada lebih dari satu flow dengan keyword yang sama, yang prioritasnya lebih tinggi yang akan dijalankan.
+</Warning>
+
+## Tips Membuat Flow yang Baik
+
+1. **Mulai dengan Sederhana**: Jangan langsung buat flow kompleks
+2. **Tambahkan Error Handling**: Jika AI tidak mengerti, arahkan ke agent manusia
+3. **Test Berulang**: Gunakan simulator berkali-kali
+4. **Gunakan Variabel**: Simpan data penting untuk follow-up
+5. **Pertimbangkan Integrasi**: Hubungkan dengan CRM atau sistem Anda
+
+## Integrasi dengan API
+
+Gunakan node **HTTP Request** untuk:
+
+- Cek stok produk
+- Cek ongkir
+- Simpan ke database
+- Ambil data customer
+
+**Konfigurasi HTTP Request:**
+```
+URL: https://api.contoh.com/cek-stok
+Method: POST
+Body: { "produk": "{{produk}}" }
+Response Variable: {stok}
+```

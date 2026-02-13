@@ -1,0 +1,63 @@
+---
+title: "Referensi Node Flow"
+description: "Referksi lengkap semua node yang tersedia di Flow Builder."
+---
+
+## Node Pemicu (Trigger)
+
+### Trigger Node
+Memulai flow ketika user mengirim kata kunci tertentu.
+
+**Properties:**
+- Keywords: Kata kunci pemicu
+- Match Type: Contains / Exact / Starts With
+
+---
+
+## Node Pesan
+
+### Static Message
+Mengirim pesan teks tetap.
+
+### AI Response
+Mengirim respons yang dihasilkan oleh AI.
+
+### Delay
+Menunggu beberapa detik sebelum lanjut ke node berikutnya.
+
+---
+
+## Node Logika
+
+### Condition
+Percabangan berdasarkan kondisi (if/else).
+
+**Operator:**
+- equals
+- contains
+- starts with
+- greater than
+- less than
+
+### Intent Classifier
+Mendeteksi niat user menggunakan AI.
+
+---
+
+## Node Data
+
+### Variable
+Menyimpan input user ke variabel untuk digunakan kemudian.
+
+### HTTP Request
+Memanggil API eksternal.
+
+---
+
+## Node Kontrol
+
+### Transfer
+Mengalihkan percakapan ke agent manusia.
+
+### End
+Mengakhiri flow.

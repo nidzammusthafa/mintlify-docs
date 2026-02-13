@@ -1,0 +1,103 @@
+---
+title: "Kelola Akun WhatsApp"
+description: "Cara mengelola multiple WhatsApp accounts, mengatur konfigurasi, dan memantau kesehatan akun."
+---
+
+Fitur **Multi-Account Management** memungkinkan Anda mengelola beberapa akun WhatsApp dalam satu dashboard. Sangat berguna untuk bisnis yang membutuhkan beberapa nomor telepon.
+
+## Menambahkan Akun Baru
+
+Ikuti panduan di [Setup Akun WhatsApp](/getting-started/account-setup) untuk menambahkan akun baru.
+
+## Konfigurasi Akun
+
+Klik ikon **Settings** pada akun untuk membuka pengaturan lanjutan.
+
+<Frame>
+  <img 
+    src="/screenshots/Dashboard/advance-account-setting.png" 
+    alt="Advance Account Settings" 
+    caption="Pengaturan lanjutan akun WhatsApp"
+  />
+</Frame>
+
+### Pengaturan Utama
+
+| Pengaturan | Deskripsi | Default |
+|------------|-----------|---------|
+| **Auto-start** | Mulai otomatis saat server hidup | Off |
+| **Sync Limit** | Jumlah pesan yang disinkronkan | 50 |
+| **Storage Mode** | Penyimpanan data (File/DB) | File |
+| **Headless Mode** | Browser berjalan di belakang layar | On |
+| **Inbox Enabled** | Aktifkan fitur inbox | On |
+| **Daily Limit** | Maksimum pesan per hari | 500 |
+| **Trust Level** | Level kepercayaan (affects rate limit) | Normal |
+
+### Health Score
+
+Health Score adalah indikator kesehatan akun WhatsApp Anda (0-100):
+
+- **90-100**: Sangat sehat, aman untuk blast massal
+- **70-89**: Sehat, aman untuk penggunaan normal
+- **50-69**: Perlu hati-hati, pertimbangkan untuk warmer
+- **< 50**: Berisiko tinggi, segera lakukan warming
+
+<Warning>
+  Akun dengan health score rendah berisiko tinggi untuk dibanned oleh WhatsApp. Gunakan fitur Account Warmer untuk memulihkan.
+</Warning>
+
+## Rotasi Akun di Blast
+
+Saat mengirim blast ke banyak penerima, WazapSuite menggunakan sistem **Round-Robin** untuk distribute pesan ke beberapa akun:
+
+```
+Pesan 1 → Akun A
+Pesan 2 → Akun B  
+Pesan 3 → Akun C
+Pesan 4 → Akun A (ulang)
+```
+
+### Keuntungan Rotasi:
+1. Mengurangi beban pada satu akun
+2. Mencegah akun dibanned karena spam
+3. Meningkatkan kapasitas pengiriman total
+4. Mempertahankan kesehatan akun
+
+## Backup & Restore Session
+
+### Export Session
+Jika Anda ingin memindahkan akun ke komputer lain atau backup:
+
+1. Klik ikon **Export** pada akun
+2. File ZIP akan terunduh
+3. Simpan file dengan aman
+
+### Import Session
+1. Klik tombol **Import Session**
+2. Upload file ZIP backup
+3. Akun akan terhubung tanpa perlu scan QR ulang
+
+## Monitoring Aktivitas
+
+Di halaman **Accounts**, Anda dapat memantau:
+
+- **Messages Today**: Jumlah pesan terkirim hari ini
+- **Last Activity**: Waktu terakhir aktivitas
+- **Logout Count**: Berapa kali akun logout
+- **Ban Count**: Jumlah peringatan banned
+
+<Frame>
+  <img 
+    src="/screenshots/Dashboard/account-dropdown.png" 
+    alt="Account Dropdown" 
+    caption="Dropdown informasi akun"
+  />
+</Frame>
+
+## Best Practices
+
+1. **Mulai dengan Safe Mode**: Untuk akun baru, gunakan delay yang lama (30+ detik)
+2. **Pakai Beberapa Akun**: Split pengiriman ke beberapa akun
+3. **Pantau Health Score**: Jaga agar selalu di atas 70
+4. **Lakukan Warming**: Sebelum blast besar, panaskan akun dulu
+5. **Backup Rutin**: Eksport session mingguan
