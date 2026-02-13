@@ -1,10 +1,10 @@
 {
   "name": "WazapSuite",
   "logo": {
-    "light": "/logo.svg",
-    "dark": "/logo.svg"
+    "light": "/favicon-32x32.png",
+    "dark": "/favicon-32x32.png"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon-32x32.png",
   "build": {
     "output": "dist"
   },
