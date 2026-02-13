@@ -29,6 +29,7 @@
       "pages": [
         "introduction",
         "quickstart",
+        "features",
         "getting-started/installation",
         "getting-started/account-setup"
       ]
@@ -43,8 +44,8 @@
       ]
     },
     {
-      "group": "Lead Generation",
-      "pages": ["scraper/maps-scraper", "scraper/export-data"]
+      "group": "Data Management",
+      "pages": ["contacts", "scraper/maps-scraper", "scraper/export-data"]
     },
     {
       "group": "AI Chatbot",
@@ -57,7 +58,7 @@
     },
     {
       "group": "Settings",
-      "pages": ["settings/general", "settings/templates"]
+      "pages": ["settings/general", "settings/templates", "analytics"]
     },
     {
       "group": "Troubleshooting",

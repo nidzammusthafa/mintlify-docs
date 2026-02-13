@@ -1,0 +1,72 @@
+---
+title: "Analytics & Laporan"
+description: "Pantau performa kampanye dan kesehatan akun WhatsApp Anda dengan dashboard analitik."
+---
+
+Fitur **Analytics** menyediakan dashboard visual untuk memantau performa pengiriman pesan, kesehatan akun, dan statistik interaksi. Data disajikan dalam berbagai periode waktu untuk membantu Anda mengambil keputusan berbasis data.
+
+## Metrik Utama
+
+### KPI yang Dilacak
+
+| Metrik | Deskripsi | Sumber Data |
+|--------|-----------|-------------|
+| **Sent** | Total pesan terkirim dari server | Blast Service, Inbox |
+| **Delivered** | Pesan sampai ke penerima (Centang 2) | WebSocket Event (ACK) |
+| **Read** | Pesan dibaca penerima (Centang biru) | WebSocket Event (ACK) |
+| **Failed** | Pesan gagal kirim | WebSocket Event (ACK) |
+| **Response Rate** | Persentase pesan dibalas | Inbox Service |
+
+## Dashboard Analytics
+
+### Ringkasan Kartu
+
+Halaman utama menampilkan kartu ringkasan dengan metrik kunci:
+- Total Pesan Terkirim
+- Tingkat Pengiriman Berhasil
+- Tingkat Baca
+- Tingkat Respons
+
+### Grafik Visual
+
+#### Line Chart - Tren pengiriman pesan selama 7/30 hari terakhir
+#### Pie Chart - distribusi status pesan (Sent vs Failed vs Read)
+#### Bar Chart - perbandingan performa antar akun
+
+## Per-Account Analytics
+
+Statistik terpisah untuk setiap akun WhatsApp yang terhubung.
+
+### Data yang Ditampilkan:
+- **Trust Score**: Newcomer / Trusted / Verified
+- **Pesan terkirim hari ini** vs Limit Harian
+- **Grafik aktivitas** per jam
+
+## Filter & Opsi
+
+### Periode Waktu
+- **Harian**: Data hari ini
+- **Mingguan**: 7 hari terakhir
+- **Bulanan**: 30 hari terakhir
+- **Custom**: Pilih rentang sendiri
+
+### Filter Akun
+Pilih akun spesifik untuk melihat statistik individual.
+
+## Export Laporan
+
+Unduh laporan dalam format Excel untuk presentasi atau analisis lebih lanjut.
+
+**Cara Export:**
+1. Buka menu Analytics
+2. Pilih periode waktu
+3. Klik tombol **Export**
+4. Pilih format (Excel/CSV)
+
+## Integrasi dengan Fitur Lain
+
+Analytics menerima data dari:
+- **Message Blast**: Sumber utama volume pesan keluar
+- **Inbox**: Sumber pesan masuk dan balasan
+- **Templates**: Data efektivitas template
+- **Account Management**: Status kesehatan akun

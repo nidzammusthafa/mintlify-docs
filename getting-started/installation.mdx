@@ -9,26 +9,38 @@ Ikuti panduan ini untuk menginstal WazapSuite dengan benar.
 
 Sebelum memulai, pastikan komputer Anda memenuhi persyaratan berikut:
 
-| Komponen | Minimum | Rekomendasi |
-|----------|---------|-------------|
-| OS | Windows 10 | Windows 11 |
-| RAM | 4 GB | 8 GB |
-| Penyimpanan | 500 MB | 1 GB |
-| Internet | 10 Mbps | 50 Mbps |
+| Komponen    | Minimum    | Rekomendasi |
+| ----------- | ---------- | ----------- |
+| OS          | Windows 10 | Windows 11  |
+| RAM         | 4 GB       | 8 GB        |
+| Penyimpanan | 500 MB     | 1 GB        |
+| Internet    | 10 Mbps    | 50 Mbps     |
 
 ## Langkah Instalasi
 
 ### 1. Unduh Installer
 
-Buka dashboard member di `https://wazapsuite.com/dashboard` dan unduh installer terbaru.
+Buka github releases di `https://github.com/nidzammusthafa/wazap-suite-releases/releases` dan unduh installer terbaru.
 
 <Info>
-  Pastikan Anda mengunduh versi terbaru untuk mendapatkan fitur terbaru dan keamanan yang diperbarui.
+  Pastikan Anda mengunduh versi terbaru untuk mendapatkan fitur terbaru dan
+  keamanan yang diperbarui.
 </Info>
+
+<Warning>
+  **Informasi Penting Selama Unduhan:**
+
+  Saat mengunduh file `.exe` dari GitHub Releases, browser mungkin menampilkan peringatan keamanan atau proses unduhan terasa lambat. Hal ini terjadi karena aplikasi belum terdaftar secara resmi di Microsoft (biaya registrasi yang tinggi). Jangan khawatir, ini adalah hal yang normal untuk aplikasi yang sedang dalam pengembangan.
+
+  **Yang perlu Anda lakukan:**
+  - Klik **Keep** atau **Simpan** saat muncul peringatan browser
+  - Jika proses unduhan tertahan, tunggu beberapa saat atau coba gunakan browser lain
+  - Saat akan menjalankan file installer, klik **Run Anyway** atau **Jalankan Anyway** pada peringatan keamanan Windows
+</Warning>
 
 ### 2. Jalankan Installer
 
-1. Buka file installer yang sudah diunduh (`WazapSuite-Setup.exe`)
+1. Buka file installer yang sudah diunduh (`WazapSuite.Setup.vX.X.X.exe`)
 2. Jika muncul peringatan keamanan, klik **Run** atau **Jalankan**
 3. Installer akan memulai proses instalasi
 
@@ -41,17 +53,17 @@ Buka dashboard member di `https://wazapsuite.com/dashboard` dan unduh installer 
 5. Klik **Finish** untuk menutup installer
 
 <Frame>
-  <img 
-    src="/screenshots/Dashboard/installation-1.png" 
-    alt="Installation Step 1" 
+  <img
+    src="/screenshots/Dashboard/installation-1.png"
+    alt="Installation Step 1"
     caption="Pilih bahasa instalasi"
   />
 </Frame>
 
 <Frame>
-  <img 
-    src="/screenshots/Dashboard/installation-2.png" 
-    alt="Installation Step 2" 
+  <img
+    src="/screenshots/Dashboard/installation-2.png"
+    alt="Installation Step 2"
     caption="Proses instalasi sedang berjalan"
   />
 </Frame>
@@ -66,15 +78,18 @@ Saat pertama kali membuka aplikasi, Anda akan diminta untuk mengaktifkan lisensi
 4. Aplikasi akan terhubung ke server lisensi
 
 <Warning>
-  Satu license hanya dapat digunakan pada satu perangkat. Jika Anda ingin berpindah perangkat, hubungi tim support kami.
+  Satu license hanya dapat digunakan pada satu perangkat. Jika Anda ingin
+  berpindah perangkat, hubungi tim support kami.
 </Warning>
 
 ## Masalah Umum Instalasi
 
 ### Error: "Application failed to start"
+
 Pastikan Visual C++ Redistributable terinstal di komputer Anda. Unduh dari situs resmi Microsoft.
 
 ### Error: "License activation failed"
+
 - Periksa koneksi internet Anda
 - Pastikan license key yang Anda masukkan benar
 - Hubungi support jika masalah berlanjut

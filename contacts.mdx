@@ -1,0 +1,72 @@
+---
+title: "Manajemen Kontak"
+description: "Kelola database pelanggan dan leads Anda dengan fitur kontak management."
+---
+
+Fitur **Contacts Management** adalah pusat data pelanggan di WazapSuite. Fitur ini menyimpan tidak hanya nomor telepon, tetapi juga profil lengkap pelanggan termasuk alamat, email, bisnis, dan data custom lainnya.
+
+## Struktur Data Kontak
+
+### Field Standar
+
+| Field | Tipe | Deskripsi |
+|-------|------|-----------|
+| `name` | String | Nama lengkap kontak (Wajib) |
+| `phoneNumber` | String | Nomor WhatsApp format internasional (628...) |
+| `businessName` | String | Nama toko/bisnis |
+| `businessCategory` | String | Kategori bisnis (Otomotif, Kuliner, dll) |
+| `city` | String | Kota domisili |
+| `address` | String | Alamat lengkap |
+| `email` | String | Alamat email |
+| `website` | String | URL website |
+| `rating` | Float | Rating prioritas (1-5) |
+| `hasReceivedMessage` | Boolean | Status pernah diblast |
+| `lastContactedAt` | DateTime | Waktu terakhir dikontak |
+
+### Custom Fields
+
+Anda dapat menambahkan hingga 5 field tambahan sesuai kebutuhan bisnis.
+Contoh: `nomor_pesanan`, `tanggal_lahir`, `jenis_member`
+
+## Import Kontak
+
+### Format File yang Didukung
+- Excel (.xlsx)
+- CSV (.csv)
+
+### Proses Import
+
+1. **Upload File**: Klik tombol Import, pilih file
+2. **Mapping Kolom**: Sistem coba deteksi otomatis, Anda bisa perbaiki
+3. **Preview**: Lihat data sebelum import
+4. **Validasi**: Sistem tandai duplikat atau format salah
+5. **Execute**: Simpan ke database
+
+### Auto-Detection
+Sistem mengenali kolom secara otomatis:
+- `phone`, `hp`, `nomor`, `wa` → `phoneNumber`
+- `name`, `nama`, `kontak` → `name`
+- `city`, `kota`, `lokasi` → `city`
+
+## Fitur Pencarian & Filter
+
+### Filter yang Tersedia
+- **Kota**: Filter berdasarkan kota
+- **Kategori Bisnis**: Filter berdasarkan kategori
+- **Status Blast**: Sudah/belum dikontak
+- **Label**: Filter berdasarkan label
+
+## Integrasi
+
+### Dengan Fitur Lain
+- **Message Blast**: Kontak menjadi target penerima
+- **Number Checker**: Hasil validasi bisa disimpan ke kontak
+- **Maps Scraper**: Data hasil scraping bisa export ke contacts
+- **Inbox**: Tampilkan nama saat pesan masuk
+
+## Tips Manajemen Kontak
+
+1. **Update Berkala**: Rutin bersihkan database dari nomor tidak valid
+2. **Gunakan Label**: Kategorikan kontak untuk mudah filtrasi
+3. **Personalisasi**: Manfaatkan custom fields untuk data spesifik bisnis
+4. **Backup**: Export secara berkala sebagai backup
