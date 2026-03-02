@@ -1,0 +1,162 @@
+---
+title: Glossary
+description: Kumpulan istilah yang sering digunakan di WazapSuite
+---
+
+# Glossary
+
+Berikut adalah daftar istilah yang sering Anda temui saat menggunakan WazapSuite. Kami jelaskan dengan bahasa yang mudah dipahami!
+
+---
+
+## 📱 Dasar-Dasar WhatsApp
+
+### Blast / Pengiriman Massal
+Pengiriman pesan WhatsApp ke banyak orang sekaligus dalam satu kali klik. Seperti broadcast, tapi bisa otomatis dan lebih canggih.
+
+**Contoh:** Mengirim promo ke 500 pelanggan sekaligus.
+
+### Session
+Koneksi aktif antara aplikasi dengan WhatsApp Web. Seperti "login" yang tersimpan, jadi nggak perlu scan QR terus-menerus.
+
+### QR Code Login
+Cara login ke WhatsApp Web dengan scan QR code dari HP. Seperti saat login WhatsApp Web di browser biasa.
+
+### Pairing Code
+Kode 6 digit untuk menghubungkan HP dengan desktop tanpa perlu scan QR. Lebih praktis kalau HP sulit diarahkan ke layar.
+
+---
+
+## 👥 Manajemen Kontak
+
+### Kontak
+Data customer/pelanggan yang tersimpan di aplikasi, biasanya terdiri dari nama dan nomor WhatsApp.
+
+### Label / Tag
+Penanda kategori untuk mengklasifikasi kontak. Berguna untuk mengelompokkan pelanggan.
+
+**Contoh:** "Pelanggan", "Supplier", "Toko A", "Priority"
+
+### Custom Fields
+Informasi tambahan yang bisa Anda tambahkan ke setiap kontak di luar nama dan nomor.
+
+**Contoh:** Alamat, ulang tahun, produk yang dibeli, dll.
+
+### Import Massal
+Memasukkan banyak kontak sekaligus dari file Excel/CSV. Lebih cepat dariinput satu per satu.
+
+---
+
+## 🤖 Chatbot & AI
+
+### AI Chatbot
+Program otomatis yang bisa chatting dengan pelanggan menggunakan kecerdasan buatan. Bisa jawab pertanyaan,layani keluhan, atau arahkan ke CS manusia.
+
+### Flow / Alur Percakapan
+Rangkaian percakapan yang sudah dirancang dalam chatbot. Seperti skrip percakapan yang dijalankan otomatis.
+
+### Trigger / Pemicu
+Kata atau kondisi yang memulai percakapan otomatis.
+
+**Contoh:** customer ketik "info", otomatis masuk ke flow informasi produk.
+
+### Variabel
+Data yang dikumpulkan dari customer selama chatting.
+
+**Contoh:** {nama} akan diganti dengan nama customer saat pesan dikirim.
+
+### Memory / Memori
+Berapa banyak chat sebelumnya yang diingat chatbot. Semakin besar memory, semakin konteks conversation yangdimengerti AI.
+
+### Auto-Reply
+Balasan otomatis tanpa perlu chatbot AI. Cocok untuk jawaban sederhana seperti jam buka, harga, dll.
+
+---
+
+## 📢 Pengiriman Pesan
+
+### Message Queue / Antrian Pesan
+Sistem antrian yang mengatur urutan pengiriman pesan. Jadi dikirim satu-satu dengan jeda, bukan sekaligus.
+
+### Delay / Jeda
+Waktu tunggu antar pengiriman pesan. Berguna untuk menghindari akun diblokir karena dianggap spam.
+
+**Contoh:** Jeda 5 detik =kiriman pesan berikutnya 5 detik setelah yang sebelumnya.
+
+### Daily Limit / Batas Harian
+Batasan maksimal pesan yang bisa dikirim per hari per akun WhatsApp. Untuk keamanan, bataskan di bawah 500 pesan/hari.
+
+### Round-Robin
+Sistem distribusi pesan secara bergantian antar beberapa akun WhatsApp.
+
+**Contoh:** Akun 1, 2, 3 bergantian mengirim. Jadi beban merata.
+
+### Account Warming / Pemanasan Akun
+Aktivitas awal untuk membangun "kepercayaan" akun WhatsApp sebelum digunakan mengirim massal. Seperti melatih akunagar dipercaya WhatsApp.
+
+---
+
+## 🗺️ Scraper
+
+### Scraper / Pengambilan Data
+Mengambil data otomatis dari Google Maps, seperti nama bisnis, nomor HP, alamat, dll.
+
+### Grid Mode
+Mode pengambilan data berdasarkan area koordinat (titik latitude/longitude) dan radius.
+
+**Contoh:** Ambil semua bisnis dalam radius 5km dari titik Jakarta.
+
+---
+
+## ⏰ Penjadwalan
+
+### Scheduler / Penjadwalan
+Sistem yang mengatur kapan pesan harus dikirim. Like alarm clock.
+
+**Contoh:** "Kirim pesan promo besok jam 9 pagi"
+
+### Time Window / Jendela Waktu
+Rentang waktu tertentu saat sistem boleh aktif.
+
+**Contoh:** Jam 08:00 - 20:00. Di luar jam itu, sistem di-pause otomatis.
+
+---
+
+## 📊 Analitik
+
+### Metrics / Metrik
+Angka-angka yang menunjukkan performa, seperti jumlah pesan terkirim, berhasil delivered, gagal, dll.
+
+### Conversion Rate
+Persentase customer yang melakukan aksi yang diinginkan setelah menerima pesan.
+
+**Contoh:** 100 orang dapat pesan promo, 10 orang membeli = 10% conversion.
+
+---
+
+## 🔐 Keamanan
+
+### License / Lisensi
+Ijin penggunaan aplikasi yang terikat dengan perangkat Anda. Seperti STNK yang terikat sama motor.
+
+### Device Binding / Binding Perangkat
+Mengikat lisensi ke komputer tertentu. Lisensi tidak bisa dipindahkan ke komputer lain.
+
+---
+
+## 💡 Istilah Lainnya
+
+### Template Pesan
+Pesan yang sudah dibuat sebelumnya dan bisa digunakan berkali-kali. Lebih praktis dari ketik ulang.
+
+### Webhook
+Cara sistem memberitahu aplikasi lain saat ada kejadian tertentu. Seperti notifikasi real-time.
+
+### API
+ Cara aplikasi berkomunikasi dengan sistem lain. Seperti "nomor telepon" untuk komputer.
+
+### Outbox
+Tempat pesan yang menunggu untuk dikirim. Seperti kotak keluar di kantor pos.
+
+### Inbox
+Tempat pesan masuk tersimpan. Seperti kotak masuk email.

@@ -1,0 +1,621 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "description": "Glosarium istilah teknis aplikasi WhatsApp Tools",
+    "lastUpdated": "2026-03-02"
+  },
+  "categories": [
+    {
+      "name": "Arsitektur & Infrastruktur",
+      "description": "Istilah terkait struktur dan teknologi yang digunakan dalam aplikasi",
+      "terms": [
+        {
+          "term": "Monorepo",
+          "pronunciation": "mo-no-re-po",
+          "definition": "Cara organize proyek dengan menyimpan banyak project dalam satu repository Git. Seperti satu rumah dengan banyak kamar, tapi semua tetap dalam satu atap.",
+          "example": "WhatsApp Tools menggunakan monorepo agar frontend, backend, dan desktop app bisa dikelola bareng-bareng."
+        },
+        {
+          "term": "NestJS",
+          "pronunciation": "nest-js",
+          "definition": "Framework backend JavaScript yang punya struktur sangat rapi. Mirip blueprint dalam membangun rumah - ada ruangan, pipa, dan listrik yang terpisah tapi terhubung.",
+          "example": "Backend API menggunakan NestJS untuk menangani request dari frontend."
+        },
+        {
+          "term": "Next.js",
+          "pronunciation": "next-js",
+          "definition": "Framework untuk membuat website React yang cepat dan SEO-friendly. Seperti memiliki asisten yang menyiapkan semua halaman sebelum dikunjungi visitor.",
+          "example": "Tampilan web dibuat dengan Next.js agar bisa di-deploy ke Vercel."
+        },
+        {
+          "term": "Electron",
+          "pronunciation": "e-lek-tron",
+          "definition": "Teknologi untuk membuat aplikasi desktop (Windows/Mac/Linux) menggunakan teknologi web (HTML, CSS, JavaScript). Seperti membuat aplikasi HP tapi untuk komputer.",
+          "example": "WhatsApp Tools versi desktop dibangun pakai Electron."
+        },
+        {
+          "term": "Prisma",
+          "pronunciation": "priz-ma",
+          "definition": "Tools yang membantu ngobrol dengan database lebih mudah. Seperti penerjemah antara kode dan database.",
+          "example": "Prisma digunakan untuk menyimpan dan mengambil data kontak dari SQLite."
+        },
+        {
+          "term": "SQLite",
+          "pronunciation": "es-kuel-lait",
+          "definition": "Database ringan yang disimpan dalam satu file. Seperti buku catatan digital yang ringan dan mudah dibawa.",
+          "example": "Data kontak dan pesan disimpan di SQLite tanpa perlu instal database server."
+        }
+      ]
+    },
+    {
+      "name": "API & Pengembangan Web",
+      "description": "Istilah terkait komunikasi antar sistem",
+      "terms": [
+        {
+          "term": "Endpoint",
+          "pronunciation": "en-point",
+          "definition": "Alamat URL spesifik buat ngakses fitur tertentu di server. Seperti nomor telepon untuk layanan tertentu.",
+          "example": "/api/send-message adalah endpoint untuk mengirim pesan."
+        },
+        {
+          "term": "Webhook",
+          "pronunciation": "web-hook",
+          "definition": "Cara server memberitahu aplikasi lain secara real-time saat ada kejadian tertentu. Seperti notifikasi push - server proactively menginformasikan kamu.",
+          "example": "Webhook memberitahu aplikasi saat ada pesan masuk baru."
+        },
+        {
+          "term": "Payload",
+          "pronunciation": "pei-lod",
+          "definition": "Data utama yang dikirim dalam request. Seperti isi paket yang dikirim via kurir.",
+          "example": "Payload JSON berisi {nama: 'John', pesan: 'Halo'}"
+        },
+        {
+          "term": "Request",
+          "pronunciation": "ri-kwest",
+          "definition": "Permintaan dari client ke server. Seperti kamu REQUEST makanan ke restoran.",
+          "example": "Browser mengirim request ke API untuk mengambil data kontak."
+        },
+        {
+          "term": "Response",
+          "pronunciation": "ri-spons",
+          "definition": "Jawaban dari server setelah memproses request. Seperti balasan dari restoran.",
+          "example": "Response berisi status sukses dan data yang diminta."
+        },
+        {
+          "term": "Environment Variables",
+          "pronunciation": "en-vai-ron-ment vai-ri-e-bels",
+          "definition": "Pengaturan rahasia yang disimpan di luar kode. Seperti kunci rumah yang disimpan di tempat aman.",
+          "example": "DATABASE_URL dan API_KEY disimpan sebagai environment variables."
+        },
+        {
+          "term": "Pagination",
+          "pronunciation": "pej-i-nei-shon",
+          "definition": "Cara membagi data besar menjadi beberapa halaman. Seperti nomor halaman di buku.",
+          "example": "Daftar 1000 kontak dibagi jadi 10 halaman @ 100 kontak per halaman."
+        }
+      ]
+    },
+    {
+      "name": "Autentikasi & Keamanan",
+      "description": "Istilah terkait keamanan dan validasi",
+      "terms": [
+        {
+          "term": "Authentication",
+          "pronunciation": "o-ten-ti-kei-shon",
+          "definition": "Proses memastikan kamu adalah kamu. Seperticek ID saat masuk kantor.",
+          "example": "Login ke aplikasi menggunakan username dan password."
+        },
+        {
+          "term": "API Key",
+          "pronunciation": "ei-pi-ai ki",
+          "definition": "Kode unik yang mengidentifikasi siapa yang akses API. Seperti ID card untuk mesin.",
+          "example": "Setiap request ke API wajib menyertakan API Key."
+        },
+        {
+          "term": "HMAC-SHA256",
+          "pronunciation": "heimak sha-256",
+          "definition": "Algoritma keamanan tingkat tinggi untuk membuat signature digital. Seperti cap keamanan yang tidak bisa dipalsukan.",
+          "example": "Signature HMAC-SHA256 memvalidasi request webhook."
+        },
+        {
+          "term": "Rate Limiting",
+          "pronunciation": "rait lai-ming",
+          "definition": "Batasan seberapa sering bisa melakukan request. Seperti batas pengambilan makanan di buffet.",
+          "example": "Maksimal 100 request per menit untuk mencegah penyalahgunaan."
+        },
+        {
+          "term": "Device Binding",
+          "pronunciation": "di-vais bain-ding",
+          "definition": "Mengikat lisensi ke perangkat tertentu. Seperti STNK yang terikat sama motor.",
+          "example": "Lisensi di-bind ke HWID komputer agar tidak bisa di-share."
+        }
+      ]
+    },
+    {
+      "name": "Real-Time & WebSocket",
+      "description": "Istilah terkait komunikasi langsung",
+      "terms": [
+        {
+          "term": "WebSocket",
+          "pronunciation": "web-sok-et",
+          "definition": "Jalur komunikasi dua arah yang selalu terbuka antara client dan server. Seperti walkie talkie yang standby terus.",
+          "example": "WebSocket menjaga koneksi agar pesan masuk langsung muncul."
+        },
+        {
+          "term": "Socket.IO",
+          "pronunciation": "sok-et ai-ou",
+          "definition": "Library yang menyederhanakan WebSocket dengan fitur tambahan. Seperti WhatsApp Web yang lebih stabil dari WebSocket standar.",
+          "example": "Socket.IO mengirim notifikasi real-time ke dashboard."
+        },
+        {
+          "term": "Emit",
+          "pronunciation": "i-mit",
+          "definition": "Mengrim event dari server ke client. Seperti push notification.",
+          "example": "Server emit event 'message:new' saat ada pesan masuk."
+        },
+        {
+          "term": "Listener",
+          "pronunciation": "li-sen-er",
+          "definition": "Komponen yang menunggu dan merespons event tertentu. Seperti orang yang standby di depan pintu.",
+          "example": "Listener menunggu event 'blast:complete' untuk update UI."
+        }
+      ]
+    },
+    {
+      "name": "Database & Pemodelan",
+      "description": "Istilah terkait penyimpanan data",
+      "terms": [
+        {
+          "term": "Schema",
+          "pronunciation": "ski-ma",
+          "definition": "Struktur kerangka database - tabel apa saja, kolom apa saja, relasinya bagaimana. Seperti denah rumah sebelum dibangun.",
+          "example": "Schema kontak punya field: id, nama, nomor, label."
+        },
+        {
+          "term": "Model",
+          "pronunciation": "mo-dal",
+          "definition": "Representasi tabel database dalam kode. Seperti class blueprint untuk tabel.",
+          "example": "Contact Model punya method .findMany() dan .create()."
+        },
+        {
+          "term": "Migration",
+          "pronunciation": "mai-grei-shon",
+          "definition": "Script perubahan struktur database secara bertahap. Seperti versi berjenjang.",
+          "example": "Migration menambahkan kolom 'createdAt' ke tabel contacts."
+        },
+        {
+          "term": "ORM",
+          "pronunciation": "ou-ar-em",
+          "definition": "Teknik mengubah tabel database jadi object di kode. Seperti translator antara dua bahasa.",
+          "example": "Prisma ORM memungkinkan pake JavaScript untuk query database."
+        },
+        {
+          "term": "UUID",
+          "pronunciation": "iu-ai-di",
+          "definition": "Identifier unik 36 karakter yang dihasilkan secara acak. Seperti nomor KTP digital.",
+          "example": "Setiap pesan dapat UUID unik seperti '550e8400-e29b-41d4-a716-446655440000'."
+        }
+      ]
+    },
+    {
+      "name": "WhatsApp API",
+      "description": "Istilah spesifik WhatsApp",
+      "terms": [
+        {
+          "term": "Session",
+          "pronunciation": "se-shon",
+          "definition": "Koneksi aktif antara aplikasi dan WhatsApp Web. Seperti login yang masih aktif.",
+          "example": "Session tersimpan agar tidak perlu scan QR setiap kali."
+        },
+        {
+          "term": "QR Code Authentication",
+          "pronunciation": "ki-ar kod o-ten-ti-kei-shon",
+          "definition": "Login dengan scan QR code dari HP ke browser. Seperti memindai QR di payment.",
+          "example": "Buka WhatsApp di HP, pilih Linked Devices, scan QR di layar."
+        },
+        {
+          "term": "Pairing Code",
+          "pronunciation": "pe-ring kod",
+          "definition": "Kode 6 digit untuk login tanpa scan QR. Seperti PIN alternatif.",
+          "example": "Masukkan kode 123456 di hp untuk menghubungkan perangkat."
+        },
+        {
+          "term": "Message Queue",
+          "pronunciation": "me-sij kiu",
+          "definition": "Antrian pesan yang akan dikirim dengan urutan dan delay. Seperti antrian di bank.",
+          "example": "1000 pesan masuk queue, dikirim satu-satu dengan jeda 5 detik."
+        },
+        {
+          "term": "Puppeteer",
+          "pronunciation": "pu-pi-tir",
+          "definition": "Library untuk mengontrol browser tanpa tampilan (headless). Seperti robot yang mengoperasikan browser.",
+          "example": "Puppeteer membuka WhatsApp Web secara otomatis."
+        },
+        {
+          "term": "Headless Mode",
+          "pronunciation": "hed-les mod",
+          "definition": "Browser yang berjalan tanpa tampilan GUI. Seperti server yang tidak ada monitornya.",
+          "example": "Puppeteer di headless mode tidak menampilkan jendela browser."
+        }
+      ]
+    },
+    {
+      "name": "Blast & Pengiriman Massal",
+      "description": "Istilah terkait pengiriman pesan massal",
+      "terms": [
+        {
+          "term": "Blast",
+          "pronunciation": "blast",
+          "definition": "Pengiriman pesan massal ke banyak orang sekaligus. Seperti broadcast TV tapi buat WhatsApp.",
+          "example": "Blast ke 500 kontak sekaligus dengan satu klik."
+        },
+        {
+          "term": "Variable Substitution",
+          "pronunciation": "vai-ri-e-bel subs-ti-tiu-shon",
+          "definition": "Mengganti placeholder dengan data asli. Seperti mail merge.",
+          "example": "'{nama}' di pesan jadi 'Halo, John!' saat dikirim ke John."
+        },
+        {
+          "term": "Randomized Message",
+          "pronunciation": "ran-daimaisd me-sij",
+          "definition": "Pesan dengan beberapa varian yang dipilih acak per penerima. Seperti spin roulette.",
+          "example": "Setiap penerima dapat salah satu dari 5 variant pesan promo."
+        },
+        {
+          "term": "Delay Preset",
+          "pronunciation": "di-lei pri-set",
+          "definition": "Konfigurasi jeda antar pengiriman pesan. Seperti atur kecepatan tik.",
+          "example": "Safe = 10 detik, Normal = 5 detik, Fast = 2 detik."
+        },
+        {
+          "term": "Round-Robin",
+          "pronunciation": "raun-ro-bin",
+          "definition": "Distribution pesan secara bergantian antar akun. Seperti rotatesecurity.",
+          "example": "Akun 1, 2, 3, 1, 2, 3 bergantian kirim pesan."
+        },
+        {
+          "term": "Daily Limit",
+          "pronunciation": "de-li li-mit",
+          "definition": "Batas maksimal pesan per hari per akun. Seperti quota harian.",
+          "example": "Daily limit 500 pesan per akun untuk menghindari blokir."
+        },
+        {
+          "term": "Trust Level",
+          "pronunciation": "trust le-vel",
+          "definition": "Tingkat kepercayaan akun berdasarkan aktivitas. Seperti scorecredit.",
+          "example": "Akun baru = trust rendah, harus pemanasan dulu."
+        },
+        {
+          "term": "Account Warming",
+          "pronunciation": "a-kaunt wor-ming",
+          "definition": "Aktivitas pemanasan akun agar dipercaya WhatsApp. Seperti latihantraining.",
+          "example": "Kirim pesan ke kontak yang sudah ada selama 2 minggu."
+        },
+        {
+          "term": "Outbox",
+          "pronunciation": "aut-boks",
+          "definition": "Tempat pesan yang akan dikirim menunggu. Seperti kotak keluar di kantor pos.",
+          "example": "Pesan masuk outbox dulu sebelum dikirim."
+        },
+        {
+          "term": "Inbox",
+          "pronunciation": "in-boks",
+          "definition": "Tempat pesan masuk tersimpan. Seperti kotak masuk email.",
+          "example": "Semua pesan masuk dari WhatsApp masuk ke inbox."
+        }
+      ]
+    },
+    {
+      "name": "Chatbot & AI",
+      "description": "Istilah terkait chatbot dan kecerdasan buatan",
+      "terms": [
+        {
+          "term": "AI Flow Builder",
+          "pronunciation": "ei-ai flou bil-der",
+          "definition": "Visual editor untuk membuat alur percakapan chatbot. Seperti flowchart maker.",
+          "example": "Drag and drop node di canvas untuk buat alur chat."
+        },
+        {
+          "term": "Flow Node",
+          "pronunciation": "flou nod",
+          "definition": "Komponen visual dalam canvas yang mewakili aksi tertentu. Seperti blok lego.",
+          "example": "Message Node untuk mengirim teks, AI Node untuk respons AI."
+        },
+        {
+          "term": "Trigger",
+          "pronunciation": "tri-ger",
+          "definition": "Pemicu yang memulai percakapan. Seperti tombol start.",
+          "example": "Trigger 'halo' akan memulai flow saat user ketik halo."
+        },
+        {
+          "term": "Condition Node",
+          "pronunciation": "kon-dish-on nod",
+          "definition": "Titik percabangan logika If/Else dalam flow. Seperti persimpangan jalan.",
+          "example": "If nama ada -> lanjut, else -> minta nama dulu."
+        },
+        {
+          "term": "LLM",
+          "pronunciation": "el-el-em",
+          "definition": "Model AI besar yang memahami dan menghasilkan bahasa manusia. Seperti otak digital.",
+          "example": "GPT-4, Gemini, Claude adalah contoh LLM."
+        },
+        {
+          "term": "System Prompt",
+          "pronunciation": "sis-tem pro-mpt",
+          "definition": "Instruksi utama yang mendefinisikan persona chatbot. Seperti karakterdasar.",
+          "example": "System Prompt: 'Kamu adalah asisten pelanggan yang ramah.'"
+        },
+        {
+          "term": "Temperature",
+          "pronunciation": "tem-pe-ra-cher",
+          "definition": "Parameter yang atur tingkat kreativitas AI. Seperti volume creativity.",
+          "example": "Temperature 0.7 = cukup kreatif, 0.1 = sangat konsisten."
+        },
+        {
+          "term": "Max Tokens",
+          "pronunciation": "maks tou-kens",
+          "definition": "Batas panjang respons AI. Seperti batas kata.",
+          "example": "Max tokens 500 = respons tidak lebih dari 500 kata."
+        },
+        {
+          "term": "Context Window",
+          "pronunciation": "kon-tekst win-dou",
+          "definition": "Jumlah pesan lama yang diingat AI. Seperti memory.",
+          "example": "Context 10 pesan = AI ingat 10 chat terakhir."
+        },
+        {
+          "term": "Memory Size",
+          "pronunciation": "me-mo-ri saiz",
+          "definition": "Konfigurasi jumlah pesan yang disimpan dalam percakapan. Seperti chat history length.",
+          "example": "Memory 50 = simpan 50 pesan terakhir per user."
+        },
+        {
+          "term": "Flow Variable",
+          "pronunciation": "flou vai-ri-e-bel",
+          "definition": "Data yang dikumpulkan dari user selama percakapan. Seperti form fields.",
+          "example": "Variable 'nama' menyimpan input nama dari user."
+        },
+        {
+          "term": "Conversation State",
+          "pronunciation": "kon-ve-rei-shon steit",
+          "definition": "Status percakapan saat ini. Seperti stage dalam journey.",
+          "example": "State: active, completed, dropped, transferred."
+        },
+        {
+          "term": "Deduplication",
+          "pronunciation": "di-diu-pli-kei-shon",
+          "definition": "Teknik mencegah pesan yang sama diproses dua kali. Seperti cek duplikat.",
+          "example": "Cek message ID sebelum proses untuk hindari double reply."
+        }
+      ]
+    },
+    {
+      "name": "Auto-Reply",
+      "description": "Istilah terkait sistem balas otomatis",
+      "terms": [
+        {
+          "term": "Auto-Reply",
+          "pronunciation": "ou-to ri-plai",
+          "definition": "Sistem balas otomatis tanpa campur tangan manusia. Seperti bot reception.",
+          "example": "Ketik 'info' dapat balasan otomatis tentang layanan."
+        },
+        {
+          "term": "Keyword Trigger",
+          "pronunciation": "ki-word tri-ger",
+          "definition": "Kata kunci yang memicu response otomatis. Seperti pemicu.",
+          "example": "Keyword 'jadwal' memicu balasan berisi jadwal."
+        },
+        {
+          "term": "Exact Match",
+          "pronunciation": "ig-zakt matc",
+          "definition": "Pencocokan yang persis sama. Seperti kunci dan gembok.",
+          "example": "User ketik 'info' dapat reply, tapi 'INFO' tidak dapat."
+        },
+        {
+          "term": "Contains Match",
+          "pronunciation": "kon-tanz matc",
+          "definition": "Pencocokan yang mengandung kata tertentu. Seperti substring search.",
+          "example": "' harga laptop' akan trigger keyword 'harga'."
+        },
+        {
+          "term": "Active Hours",
+          "pronunciation": "ak-tiv au-ers",
+          "definition": "Jangka waktu ketika auto-reply aktif. Seperti jam operasional.",
+          "example": "Active hours 09:00-18:00, di luar jam tidak reply."
+        },
+        {
+          "term": "Template Message",
+          "pronunciation": "tem-plet me-sij",
+          "definition": "Pesan yang sudah dibuat dan bisa digunakan ulang. Seperti pesan siappakai.",
+          "example": "Template 'Terima kasih' bisa dipakai berkali-kali."
+        }
+      ]
+    },
+    {
+      "name": "Kontak & CRM",
+      "description": "Istilah terkait manajemen kontak",
+      "terms": [
+        {
+          "term": "Contact Schema",
+          "pronunciation": "kon-tak ski-ma",
+          "definition": "Struktur data kontak - field apa saja yang ada. Seperti biodataform.",
+          "example": "Schema wajib: nama, nomor. Custom: alamat, ulang tahun."
+        },
+        {
+          "term": "Custom Fields",
+          "pronunciation": "kas-tom filds",
+          "definition": "Field tambahan yang bisa ditambahkan sendiri. Seperti kolom extras.",
+          "example": "Tambah field 'pekerjaan' ke kontak."
+        },
+        {
+          "term": "Label/Tag",
+          "pronunciation": "lei-bel/tag",
+          "definition": "Penanda kategori untuk mengklasifikasi kontak. Seperti label di filer.",
+          "example": "Kontak dikasih tag 'pelanggan', 'supplier', 'toko A'."
+        },
+        {
+          "term": "Import Wizard",
+          "pronunciation": "im-port wi-zard",
+          "definition": "Panduan step-by-step untuk import data massal. Seperti guided tour.",
+          "example": "Wizard import Excel dengan mapping kolom ke field."
+        },
+        {
+          "term": "Column Mapping",
+          "pronunciation": "ko-lam ma-ping",
+          "definition": "Pemetaan kolom file ke field database. Seperti menyocokkan.",
+          "example": "Kolom A di Excel = field 'nama', Kolom B = 'nomor'."
+        }
+      ]
+    },
+    {
+      "name": "Number Checker",
+      "description": "Istilah terkait pengecekan nomor",
+      "terms": [
+        {
+          "term": "Number Validation",
+          "pronunciation": "nam-ber va-li-dei-shon",
+          "definition": "Memeriksa apakah nomor aktif di WhatsApp. Seperti cek nomor.",
+          "example": "Cek 100 nomor, dapat 80 aktif, 20 tidak terdaftar."
+        },
+        {
+          "term": "Active Status",
+          "pronunciation": "ak-tiv stei-tus",
+          "definition": "Nomor yang masih aktif dan bisa terima pesan. Seperti nomor hidup.",
+          "example": "Nomor ini active, bisa dikirimi pesan WhatsApp."
+        },
+        {
+          "term": "Inactive Status",
+          "pronunciation": "in-ak-tiv stei-tus",
+          "definition": "Nomor yang sudah tidak terdaftar di WhatsApp. Seperti nomor mati.",
+          "example": "Nomor ini inactive, tidak bisa kirim pesan."
+        }
+      ]
+    },
+    {
+      "name": "Maps Scraper",
+      "description": "Istilah terkait pengambilan data peta",
+      "terms": [
+        {
+          "term": "Scraping",
+          "pronunciation": "skrei-ping",
+          "definition": "Mengambil data otomatis dari website. Seperti copas massal.",
+          "example": "Scraping data bisnis dari Google Maps."
+        },
+        {
+          "term": "Coordinate Mode",
+          "pronunciation": "ko-or-di-neit mod",
+          "definition": "Scraping berdasarkan titik koordinat dan radius. Seperti area search.",
+          "example": "Cari bisnis dalam radius 5km dari titik (-6.2, 106.8)."
+        },
+        {
+          "term": "Grid Generator",
+          "pronunciation": "grid je-ne-rei-ter",
+          "definition": "Membuat titik-titik koordinat dalam area tertentu. Seperti buat jaring.",
+          "example": "Buat grid 10x10 titik untuk area Jakarta."
+        },
+        {
+          "term": "Phone Formatting",
+          "pronunciation": "foun for-ma-ting",
+          "definition": "Menormalkan format nomor ke standar WhatsApp. Seperti rapihkan nomor.",
+          "example": "081234567890 -> 6281234567890"
+        }
+      ]
+    },
+    {
+      "name": "Scheduler",
+      "description": "Istilah terkait penjadwalan",
+      "terms": [
+        {
+          "term": "Scheduler",
+          "pronunciation": "ske-jiu-ler",
+          "definition": "Sistem yang mengontrol kapan job berjalan. Seperti alarm manager.",
+          "example": "Scheduler atur blast jalan jam 9 pagi setiap hari."
+        },
+        {
+          "term": "Time Window",
+          "pronunciation": "taim win-dou",
+          "definition": "Rentang waktu spesifik ketika job boleh jalan. Seperti jam kerja.",
+          "example": "Time window 08:00-20:00, di luar itu job di-pause."
+        },
+        {
+          "term": "Cron Expression",
+          "pronunciation": "kron ik-spre-shon",
+          "definition": "Format string untuk mendefinisikan schedule. Seperti kode jam.",
+          "example": "0 9 * * * = jalan jam 9 pagi setiap hari."
+        },
+        {
+          "term": "Auto-Pause",
+          "pronunciation": "ou-to poz",
+          "definition": "Penjadwalan otomatis untuk menjeda job di luar waktu aktif. Seperti auto stop.",
+          "example": "Masuk jam 20:01, job auto-pause sampai jam 08:00."
+        },
+        {
+          "term": "Auto-Resume",
+          "pronunciation": "ou-to ri-zium",
+          "definition": "Penjadwalan otomatis untuk melanjutkan job saat masuk waktu aktif. Seperti auto start.",
+          "example": "Masuk jam 08:00, job auto-resume dan lanjut mengirim."
+        }
+      ]
+    },
+    {
+      "name": "Analytics",
+      "description": "Istilah terkait analitik dan metrik",
+      "terms": [
+        {
+          "term": "Metrics",
+          "pronunciation": "me-triks",
+          "definition": "Pengukuran kuantitatif hasil kerja. Seperti angka kinerja.",
+          "example": "Metrics: 500 terkirim, 450 delivered, 30 failed."
+        },
+        {
+          "term": "Flow Analytics",
+          "pronunciation": "flou a-na-li-tiks",
+          "definition": "Metrik spesifik untuk chatbot flow. Seperti analytic chat.",
+          "example": "Flow analytics: 100 percakapan dimulai, 70 selesai."
+        },
+        {
+          "term": "Node Metrics",
+          "pronunciation": "nod me-triks",
+          "definition": "Metrik per komponen dalam flow. Seperti analytic per blok.",
+          "example": "Node A: 100 masuk, 80 keluar. Node B: 80 masuk."
+        },
+        {
+          "term": "AI Cost",
+          "pronunciation": "ei-ai kost",
+          "definition": "Biaya penggunaan AI berdasarkan token yang dipakai. Seperti token quota.",
+          "example": "1000 token = $0.002 untuk GPT-4."
+        }
+      ]
+    },
+    {
+      "name": "Desktop App",
+      "description": "Istilah terkait aplikasi desktop",
+      "terms": [
+        {
+          "term": "Preload Script",
+          "pronunciation": "pri-loud skript",
+          "definition": "Script yang berjalan di context khusus Electron. Seperti bridge.",
+          "example": "Preload expose API ke renderer untuk akses file system."
+        },
+        {
+          "term": "IPC",
+          "pronunciation": "ai-pi-si",
+          "definition": "Komunikasi antar proses di Electron. Seperti intercom.",
+          "example": "Renderer minta main process buka file via IPC."
+        },
+        {
+          "term": "Server Manager",
+          "pronunciation": "ser-ver ma-na-jer",
+          "definition": "Komponen yang mengelola lifecycle server. Seperti control panel.",
+          "example": "Server manager bisa start/stop/restart server."
+        },
+        {
+          "term": "Auto-Updater",
+          "pronunciation": "ou-to ap-dei-ter",
+          "definition": "Sistem update otomatis. Seperti Windows Update.",
+          "example": "Auto-updater cek versi baru dan install sendiri."
+        }
+      ]
+    }
+  ]
+}
